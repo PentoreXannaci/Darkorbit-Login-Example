@@ -58,12 +58,11 @@ def set_useragent():
     tree = ET.fromstring(updates_response.content)
 
     package_update_version = tree.find(".//Version").text
-    Pheaders["User-Agent"] = f"BigPointClient/{package_update_version}"
+    headers["User-Agent"] = f"BigPointClient/{package_update_version}"
 
 
 #set the useragent to the darkorbit client useragent. 
 set_useragent()
-
 username = input("Username: ")
 password = input("Password: ")
 
